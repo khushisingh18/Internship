@@ -1,0 +1,251 @@
+
+
+ @import url(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" );
+ 
+font-family: 'Roboto', sans-serif;
+ :root {
+    --lighting-color:#0089b7;
+    --dark-color:#003d62;
+    --darker-color:#003251;
+    --secondary-color:#fff700;
+ }
+ *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+ html {
+   font-size: 62.5%;
+ }
+ body,
+ html{
+   font-family: "Poppins",sans-serif;
+   font-weight: 300;
+   line-height: 1.4;
+   scroll-behavior: smooth;
+   color:white;
+ }
+ body{
+   font-size:1.4rem ;
+ }
+ .container{
+   max-width:1300px;
+   margin: 0 auto;
+   padding: 0 2rem;
+ }
+ a{
+   text-decoration: none ;
+   color: #003251 ;
+ }
+ ul{
+   list-style: none;
+ }
+
+  header{
+   background-color:#0089b7 ;
+   
+ }
+ nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem;
+
+ }
+ nav ul {
+   display:flex;
+   gap: 1rem;
+ }
+ nav li{
+   font: size 1.8rem;
+   border-bottom: 0.4rem transparent solid ;
+   transition: 0.3s ease-in-out; 
+
+ }
+ nav li:hover{
+   border-bottom: 0.4rem #fff700 solid ;
+   transition: 0.3s ease-in-out;
+ }
+ .logo{
+   font-size: 2rem;
+   font-weight: 700;
+
+ }
+ #developer{
+   background:#003d62 ;
+   padding:4rem 0;
+   border-bottom: 8px solid skyblue ;
+   
+ }
+ /* #developer.developer_image{ */
+  #developer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .developer_content{
+    display: grid;
+    place-items: center ;
+ }
+ #developer h1{
+  font-size: 4rem;
+  font-weight: bold;
+  
+ }
+ .hey_text{
+  font-size: 7rem;
+  font-weight: bold;
+  color:mediumseagreen;
+
+ }
+ .naming_text{
+
+  font-size:6rem ;
+ }
+ #developer h2{
+  font-size: 3rem;
+  font-weight: bold;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(144, 18, 18);
+  white-space: nowrap;
+  margin:0 auto ;
+  animation: typing 5s steps(30,end), blink-caret 0.70s step-end; 
+ }
+ @keyframes typing{
+  from{
+    width:0;
+  }
+  to{
+    width:100%;
+  }
+ }
+ @keyframes blink-caret{
+  from,
+  to{
+    border-color: aliceblue;
+  }
+  50%{
+    border-color:black ;
+  }
+ }
+/* related to project */
+#project{
+  background:#003251 ;
+}
+#project h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+  padding:  3rem 0 ;
+
+}
+.project_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 4rem;
+}
+.queue_item{
+  display: grid;
+  place-items:center ;
+
+}
+.column{
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.column:hover{
+  transform: scale(1.08);
+  transition: 1.5s ease-in-out;
+
+}
+.column:hover .column_content{
+  background:whitesmoke;
+  color: #fff700;
+  text-align: center;
+}
+.column_content{
+  padding:3rem ;
+position: relative;
+top: -7rem;
+margin: -7rem;
+transition: 0.6s ease-in-out;
+}
+.column_content{
+  text-align: center;
+}
+/* section for contact */
+#contact{
+  background:purple;
+}
+#contact_h2{
+  font-size: 6rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+#contact.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column ;
+  gap: 2rem;
+justify-content: center;
+}
+.upper_contact{
+  display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+ margin: 0 auto;
+  max-width: 1000px;
+
+}
+.contact_map{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+}
+.contact_map i{
+  font-size: 4rem;
+}
+.contact_map h3{
+  font-size:3rem ;
+  font-weight: bold;
+
+}
+.lower_contact{
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 5000px;
+  grid-template-columns: repeat(auto-fit,minmax(90px,1fr));
+
+}
+/* footer designing */
+footer{
+  background: blueviolet;
+  padding: 3rem;
+  color: aquamarine;
+  font-size: 2rem;
+  text-align: center;
+}
+/* media problems */
+@media(max-width:790px){
+  html{
+    font-size:45% ;
+  }
+}
+@media(max-width:450px){
+  html{
+    font-size:28px ;
+    #developer.container{
+      flex-direction:column ;
+    }
+  }
+  .developer_image{
+    display: grid;
+    place-items:center ;
+  }
+}
+
